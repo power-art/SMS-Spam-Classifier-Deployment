@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		/* Result */
+		.results{
+		    padding: 30px 0 0;
+			flex: 1 0 auto;
+		}
+
+		.danger{
+		    color: #ff0000;
+		}
+
+		.safe{
+		    color: green;
+		}
+
+		.gif{
+			width: 30%;
+		}
+	</style>
+</head>
+<body>
+
+
+	<!-- Result -->
+	<div class="results">
+		{% if prediction==1 %}
+			<h1>Prediction: <span class='danger'>Gotcha! This is a SPAM message.</span></h1>
+			<img class="gif" src="{{ url_for('static', filename='spam.webp') }}" alt="SPAM Image">
+		{% elif prediction==0 %}
+			<h1>Prediction: <span class='safe'>Great! This is NOT a spam message.</span></h1>
+			<img class="gif" src="{{ url_for('static', filename='not-spam.webp') }}" alt="Not a spam image">
+		{% endif %}
+	</div>
+
+
+</body>
+</html>
