@@ -3,6 +3,7 @@
 <head>
 	<title>SMS Spam Detector</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style type="text/css">
 		
@@ -10,6 +11,7 @@
 
 /* Website Title */
 .container{
+	text-align: center;
 	padding: 30px;
 	position: relative;
 	background: linear-gradient(45deg, #ffffff, #ffffff, #f9f9f9, #eeeeee, #e0e4e1, #d7e1ec);
@@ -33,7 +35,7 @@
 }
 
 .container span{
-    color: #ff0000;
+    color: #D37C35;
 }
 
 .description p{
@@ -90,14 +92,40 @@
 		}
 
 
+/* Footer */
+.footer{
+	text-align: center;
+    font-size: 14px;
+	padding: 20px;
+	flex-shrink: 0;
+	position: relative;
+	background: linear-gradient(45deg, #ffffff, #ffffff, #f9f9f9, #eeeeee, #e0e4e1, #d7e1ec);
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+
+.contact-icon{
+	color: #000000;
+	padding: 7px;
+}
+
+
+.contact-icon:hover{
+	color: #8c8c8c;
+}
+
+.footer-description{
+	margin: 0;
+	font-size: 12px;
+}
 
 	</style>
 </head>
-<body>
+<body style="background-color: #EFE5B5">
 
   <!-- Website Title -->
     	<div class="container">
-    		<h2 class='container-heading'><span>Spam Detector</span> for Short Message Service (SMS)</h2>
+    		<h2 class='container-heading' style="color: #407614"><span>Spam Detector</span> for Short Message Service (SMS)</h2>
             <div class='description'>
     			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
     		</div>
@@ -113,6 +141,14 @@
 		
 	</div>
 
+ <!-- Footer -->
+    <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href="https://github.com/power-art/SMS-Spam-Classifier-Deployment"><i class="fa fa-github"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/preetam-d/"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <p class='footer-description'>Made by Preetam Dwivedi</p>
+    </div>
 
 
 
