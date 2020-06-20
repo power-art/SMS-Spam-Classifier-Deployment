@@ -1,6 +1,8 @@
-
 from flask import Flask, render_template, request
 import pickle
+
+import warnings
+warnings.filterwarnings("ignore")
 
 #Load Multinomial naive Bayes model and CountVectorizer object
 #from disk

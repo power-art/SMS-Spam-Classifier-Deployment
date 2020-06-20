@@ -7,6 +7,42 @@
 	<style type="text/css">
 		
 
+
+/* Website Title */
+.container{
+	padding: 30px;
+	position: relative;
+	background: linear-gradient(45deg, #ffffff, #ffffff, #f9f9f9, #eeeeee, #e0e4e1, #d7e1ec);
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+@keyframes change-gradient {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+
+.container-heading{
+    margin: 0;
+}
+
+.container span{
+    color: #ff0000;
+}
+
+.description p{
+    font-style: italic;
+    font-size: 14px;
+    margin: 3px 0 0;
+}
+
+
 		.my-cta-button{
 			background: #f9f9f9;
 			border: 2px solid #000000;
@@ -21,11 +57,13 @@
 
 		/* Text Area */
 		.ml-container{
+			text-align: center;
 			margin: 30px 0;
 			flex: 1 0 auto;
 		}
 
 		.message-box{
+			background: #ECF4F3;
 			margin-bottom: 20px;
 		}
 
@@ -52,14 +90,23 @@
 		}
 
 
+
 	</style>
 </head>
 <body>
 
+  <!-- Website Title -->
+    	<div class="container">
+    		<h2 class='container-heading'><span>Spam Detector</span> for Short Message Service (SMS)</h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+    
 	<!-- Text Area -->
 	<div class="ml-container">
 		<form action="{{ url_for('predict') }}" method="POST">
-			<textarea class="message-box" name="message" rows="20" cols="80" placeholder="Enter Your Message Here ....."></textarea>
+			<textarea class="message-box" name="message" rows="10" cols="70" placeholder="Enter Your Message Here ....."></textarea><br>
 			<input type="submit" class="my-cta-button" value="Predict">
 
 		</form>
