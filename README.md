@@ -4,4 +4,4 @@
 **_Flask_** on **_Heroku_** platform
 
 - If you want to view the deployed model, click on the following link:<br>
-Deployed at: http
+Deployed at: https://sms-spam-detector-api.herokuapp.com/
